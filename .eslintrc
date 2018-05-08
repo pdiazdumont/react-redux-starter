@@ -1,0 +1,19 @@
+{
+    "parser": "babel-eslint",
+    "plugins": ["react"],
+	"extends": ["eslint:recommended", "plugin:react/recommended"],
+	"globals": {
+		"Component": true,
+		"Connect": true,
+		"React": true,
+		"window": true
+	},
+	"env": {
+		"browser": true
+	},
+	"rules": {
+		"no-unused-vars": 0,
+		"no-console": "off",
+		"react/prop-types": 0
+	}
+}
