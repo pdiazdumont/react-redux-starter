@@ -2,17 +2,14 @@ class App extends Component {
 	render() {
 		return (
 			<div>
-				Ready
-				<button onClick={ this.hi }>asdsad</button>
+				Ready!
 			</div> 
 		)
 	}
 }
 
 function mapStateToProps(state) {
-	return {
-		
-	}
+	return state
 }
 
 export default Connect(mapStateToProps)(App)

@@ -1,10 +1,13 @@
 const path = require("path")
 const cleanWebpackPlugin = require('clean-webpack-plugin')
-const htmlWebpackPlugin = require('html-webpack-plugin')
 const webpack = require('webpack')
 
 module.exports = {
-	entry: ["babel-polyfill", "babel-plugin-transform-async-to-generator", "./src/index.js"],
+	entry: [
+		"babel-polyfill",
+		"babel-plugin-transform-async-to-generator",
+		"./src/index.js"
+	],
 	output: {
 		filename: "app.js",
 		path: path.resolve(__dirname, "dist")
@@ -20,9 +23,6 @@ module.exports = {
 	},
 	plugins: [
 		new cleanWebpackPlugin(["dist"]),
-		new htmlWebpackPlugin({
-			template: "src/index.html"
-		}),
 		new webpack.HotModuleReplacementPlugin(),
 		new webpack.ProvidePlugin({
 			React: "react",
